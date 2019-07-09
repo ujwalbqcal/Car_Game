@@ -66,6 +66,11 @@ update() {
   this.positionX = (this.lane + 0.5) * laneWidth - (this.width / 2);
   this.positionY     += speed;
 }
+      updateplayerCar(){
+  this.positionX = (this.lane + 0.5) * laneWidth - (this.width / 2);
+  this.positionY = this.positionY;
+
+}
 
 }
 
@@ -165,7 +170,7 @@ function getKeyAndMove(el){
 function moveLeft(){
   if(playerCar.lane>0){
   playerCar.lane -= 1;
-  playerCar.update();
+  playerCar.updateplayerCar();
   updateAll();
 }
   // belowCar.draw();
@@ -174,7 +179,7 @@ function moveLeft(){
 function moveRight(){
   if(playerCar.lane<2){
   playerCar.lane += 1;
-  playerCar.update();
+  playerCar.updateplayerCar();
   updateAll();
 
 }
