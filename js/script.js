@@ -24,6 +24,7 @@ function drawPath(){
     ctx.lineTo(200,window.innerHeight);
     ctx.moveTo(400,0);
     ctx.lineTo(400,window.innerHeight);
+    ctx.setLineDash([20,15]);
     ctx.strokeStyle = 'white';
     ctx.stroke();
 
